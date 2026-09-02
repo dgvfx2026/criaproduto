@@ -1,292 +1,185 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pack Ultimate — 300 Prompts de IA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CRIA — 300 Prompts de IA</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,html body{scroll-behavior:smooth;background:#0A0D14!important;color:#fff!important}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:#0A0D14;color:#fff;line-height:1.6;min-height:100vh}
 
-:root {
-  --blue: #3B82F6;
-  --blue-d: #1D4ED8;
-  --blue-l: #EFF6FF;
-  --blue-m: #BFDBFE;
-  --violet: #7C3AED;
-  --violet-l: #F5F3FF;
-  --violet-m: #DDD6FE;
-  --dark: #0D1117;
-  --dark2: #161B27;
-  --dark3: #1E2435;
-  --dark-card: #13161E;
-  --text: #111827;
-  --text2: #374151;
-  --gray: #6B7280;
-  --lgray: #9CA3AF;
-  --border: #E5E7EB;
-  --bg: #F4F6F8;
-  --white: #FFFFFF;
-  --green: #10B981;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 10pt; line-height: 1.65; }
+/* ── PAGE ── */
+.page{max-width:860px;margin:0 auto;padding:0 20px 80px;background:#0A0D14;color:#fff}
 
-/* ── COVER ── */
-.cover {
-  background: var(--dark);
-  min-height: 100vh;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 60px 48px; text-align: center; page-break-after: always;
-  position: relative; overflow: hidden;
-}
-.cover::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 20%, rgba(59,130,246,0.12) 0%, transparent 70%),
-              radial-gradient(ellipse 50% 40% at 20% 80%, rgba(124,58,237,0.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-.cover-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 8pt; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--blue); border: 1px solid rgba(59,130,246,0.35);
-  background: rgba(59,130,246,0.07);
-  padding: 7px 20px; border-radius: 40px; margin-bottom: 44px; position: relative;
-}
-.cover h1 {
-  font-size: 60pt; font-weight: 800; color: var(--white); line-height: 1.0;
-  margin-bottom: 14px; letter-spacing: -2px; position: relative;
-}
-.cover h1 .hi { color: var(--blue); }
-.cover-sub {
-  font-size: 10pt; font-weight: 400; color: var(--lgray);
-  letter-spacing: 0.5px; margin-bottom: 56px; position: relative;
-}
-.cover-stats { display: flex; gap: 0; justify-content: center; margin-bottom: 56px; position: relative; }
-.cs {
-  text-align: center; padding: 0 40px;
-  border-right: 1px solid rgba(255,255,255,0.08);
-}
-.cs:last-child { border-right: none; }
-.cs .num { font-size: 34pt; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -1px; }
-.cs .lbl { font-size: 7.5pt; color: var(--lgray); letter-spacing: 2px; text-transform: uppercase; margin-top: 5px; }
-.cover-tools { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; position: relative; }
-.tp { padding: 7px 16px; border-radius: 8px; font-size: 8pt; font-weight: 600; letter-spacing: 0.3px; }
-.tp.img { background: rgba(59,130,246,0.12); color: #93C5FD; border: 1px solid rgba(59,130,246,0.25); }
-.tp.vid { background: rgba(124,58,237,0.12); color: #C4B5FD; border: 1px solid rgba(124,58,237,0.25); }
-.tp.vids { background: rgba(16,185,129,0.10); color: #6EE7B7; border: 1px solid rgba(16,185,129,0.2); }
-.cover-footer { position: absolute; bottom: 28px; font-size: 8pt; color: rgba(255,255,255,0.15); letter-spacing: 2px; text-transform: uppercase; }
+/* ── HEADER ── */
+.header{text-align:center;padding:52px 0 40px;background:#0A0D14;color:#fff}
+.logo{font-size:52px;font-weight:900;background:linear-gradient(135deg,#3B82F6,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-2px;line-height:1}
+.logo-sub{font-size:14px;color:#4B5568;letter-spacing:3px;text-transform:uppercase;margin-top:8px}
 
-/* ── HOW TO ── */
-.how {
-  background: var(--dark2); min-height: 100vh;
-  padding: 72px 80px; display: flex; flex-direction: column; justify-content: center;
-  page-break-after: always;
-}
-.how h2 { font-size: 26pt; font-weight: 800; color: var(--white); margin-bottom: 6px; letter-spacing: -0.5px; }
-.how .si { color: var(--lgray); font-size: 10pt; margin-bottom: 40px; }
-.hg { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
-.hc {
-  background: var(--dark3); border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 14px; padding: 22px;
-}
-.hc .ico { font-size: 20px; margin-bottom: 10px; }
-.hc h3 { color: var(--white); font-size: 10.5pt; font-weight: 700; margin-bottom: 6px; }
-.hc p { color: var(--lgray); font-size: 9pt; line-height: 1.65; }
-.hc code { background: rgba(59,130,246,0.12); color: #93C5FD; padding: 2px 6px; border-radius: 5px; font-family: 'JetBrains Mono', monospace; font-size: 8pt; }
-.rb { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; padding: 22px 26px; }
-.rb h3 { color: var(--blue); font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
-.rr { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
-.rr:last-child { margin-bottom: 0; }
-.rt { font-family: 'JetBrains Mono', monospace; font-size: 8.5pt; font-weight: 500; color: #93C5FD; background: rgba(59,130,246,0.12); padding: 3px 10px; border-radius: 6px; white-space: nowrap; }
-.rd { color: var(--lgray); font-size: 9pt; padding-top: 3px; }
+/* ── TUTORIAL ── */
+.tut{background:#13161E;border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:28px 32px;margin-bottom:36px;color:#fff}
+.tut-title{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px}
+.steps{display:flex;gap:0;align-items:stretch}
+.step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:0 12px;position:relative}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:18px;color:rgba(255,255,255,0.2)}
+.step-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.step-text{font-size:13px;font-weight:600;color:#C9D1E0;line-height:1.4}
+.step-sub{font-size:11px;color:#5A6478;line-height:1.4}
 
-/* ── TOC ── */
-.toc { background: var(--bg); min-height: 100vh; padding: 72px 80px; page-break-after: always; }
-.toc h2 { font-size: 26pt; font-weight: 800; color: var(--text); margin-bottom: 6px; letter-spacing: -0.5px; }
-.tsub { color: var(--gray); font-size: 10pt; margin-bottom: 40px; }
-.ts { margin-bottom: 28px; }
-.tph { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--border); }
-.pl { font-size: 7pt; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--white); padding: 4px 12px; border-radius: 6px; }
-.pli { background: var(--blue); }
-.plv { background: var(--violet); }
-.tph h3 { font-size: 11pt; font-weight: 700; color: var(--text); }
-.ti { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px 24px; }
-.titem { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 9pt; }
-.titem .cn { color: var(--text2); font-weight: 500; }
-.titem .cc { font-family: 'JetBrains Mono', monospace; font-size: 8pt; color: var(--gray); background: var(--border); padding: 2px 8px; border-radius: 20px; }
-.tt { width: 100%; border-collapse: collapse; margin-top: 20px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
-.tt th { background: var(--dark); color: var(--lgray); font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; padding: 11px 16px; text-align: left; font-weight: 600; }
-.tt td { padding: 11px 16px; font-size: 9pt; border-bottom: 1px solid var(--border); background: var(--white); color: var(--text2); }
-.tt td strong { color: var(--text); }
-.tt tr:last-child td { border-bottom: none; }
+/* ── SEARCH ── */
+.search-wrap{position:sticky;top:0;z-index:99;padding:12px 0;background:#0A0D14!important;margin-bottom:8px}
+.search-box{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:12px 18px;transition:border-color .2s}
+.search-box:focus-within{border-color:rgba(59,130,246,0.5)}
+.search-icon{font-size:16px;opacity:.5;flex-shrink:0}
+.search-inp{flex:1;background:none;border:none;outline:none;color:#fff;font-size:15px;font-family:inherit;min-width:0}
+.search-inp::placeholder{color:rgba(255,255,255,0.3)}
+.search-count{font-size:12px;color:rgba(255,255,255,0.3);flex-shrink:0;white-space:nowrap}
 
-/* ── PAGES ── */
-.page { background: var(--bg); min-height: 100vh; padding: 56px 64px; page-break-after: always; }
-.page-last { page-break-after: auto; }
-
-/* ── PART SEP ── */
-.psep { background: var(--dark); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px; page-break-after: always; position: relative; overflow: hidden; }
-.psep::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 30%, rgba(59,130,246,0.10) 0%, transparent 70%); pointer-events: none; }
-.psep.pv::before { background: radial-gradient(ellipse 60% 50% at 50% 30%, rgba(124,58,237,0.10) 0%, transparent 70%); }
-.psep .pn { font-size: 8pt; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 18px; position: relative; }
-.psep.pi .pn { color: var(--blue); }
-.psep.pv .pn { color: #A78BFA; }
-.psep h2 { font-size: 40pt; font-weight: 800; color: var(--white); margin-bottom: 14px; line-height: 1.05; letter-spacing: -1px; position: relative; }
-.psep p { color: var(--lgray); font-size: 10pt; max-width: 460px; line-height: 1.7; margin-bottom: 36px; position: relative; }
-.tl { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; position: relative; }
-
-/* ── CAT HEADER ── */
-.ch { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; padding-bottom: 16px; border-bottom: 2px solid var(--border); }
-.ci { font-size: 20px; }
-.ctb h2 { font-size: 17pt; font-weight: 800; color: var(--text); line-height: 1.2; letter-spacing: -0.3px; }
-.ctb .cm { font-size: 8pt; color: var(--gray); margin-top: 3px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; }
-.crn { margin-left: auto; text-align: right; }
-.rnt { font-family: 'JetBrains Mono', monospace; font-size: 8pt; font-weight: 500; background: var(--blue-l); color: var(--blue-d); border: 1px solid var(--blue-m); padding: 4px 12px; border-radius: 20px; }
-
-/* ── CAT TOOLS ── */
-.cat-tools { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; flex-wrap: wrap; }
-.cat-tools .ctl { font-size: 7.5pt; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); margin-right: 2px; }
+/* ── CATEGORY HEADER ── */
+.cat-section{margin-bottom:8px}
+.ch{display:flex;align-items:center;gap:12px;padding:20px 0 12px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:12px}
+.ci{font-size:20px;width:36px;height:36px;background:rgba(59,130,246,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ctb h2{font-size:15px;font-weight:800;color:#fff}
+.cm{font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:.5px}
+.crn{margin-left:auto;flex-shrink:0}
+.rnt{font-size:11px;font-weight:600;background:rgba(59,130,246,0.1);color:#93C5FD;border:1px solid rgba(59,130,246,0.2);padding:3px 10px;border-radius:20px}
+.cat-tools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;padding:0}
+.ctl{font-size:11px;color:rgba(255,255,255,0.35);font-weight:600}
+.tp{padding:3px 11px;border-radius:20px;font-size:10.5px;font-weight:700}
+.tp.img{background:rgba(59,130,246,0.12);color:#93C5FD;border:1px solid rgba(59,130,246,0.2)}
+.tp.vid{background:rgba(124,58,237,0.12);color:#C4B5FD;border:1px solid rgba(124,58,237,0.2)}
+.tp.vids{background:rgba(16,185,129,0.1);color:#6EE7B7;border:1px solid rgba(16,185,129,0.2)}
 
 /* ── PROMPT CARD ── */
-.pc { background: var(--white); border-radius: 12px; margin-bottom: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.05); break-inside: avoid; }
-.ph { padding: 13px 18px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
-.pn { font-family: 'JetBrains Mono', monospace; font-size: 8pt; font-weight: 500; color: var(--white); padding: 3px 10px; border-radius: 6px; white-space: nowrap; }
-.ni { background: var(--blue); }
-.nv { background: var(--violet); }
-.pt { font-size: 10pt; font-weight: 700; color: var(--text); flex: 1; }
-.prt { font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; color: var(--violet); background: var(--violet-l); border: 1px solid var(--violet-m); padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.pc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;margin-bottom:8px;overflow:hidden;transition:border-color .2s}
+.pc:hover{border-color:rgba(59,130,246,0.3)}
+.pc.hidden{display:none!important}
+.ph{display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.06);flex-wrap:nowrap}
+.pn{font-size:10px;font-weight:800;padding:2px 9px;border-radius:20px;flex-shrink:0;font-family:"JetBrains Mono",monospace;letter-spacing:.5px}
+.pn.ni{background:rgba(59,130,246,0.15);color:#93C5FD;border:1px solid rgba(59,130,246,0.2)}
+.pn.nv{background:rgba(124,58,237,0.15);color:#C4B5FD;border:1px solid rgba(124,58,237,0.2)}
+.pt{flex:1;font-size:13px;font-weight:700;color:#fff;min-width:0}
+.prt{display:none}
+.cp{flex-shrink:0;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.22);color:#93C5FD;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:"Plus Jakarta Sans",sans-serif;transition:all .15s;white-space:nowrap}
+.cp:hover{background:rgba(59,130,246,0.25);color:#fff}
+.cp.ok{background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);color:#6EE7B7}
+.pb{padding:14px 16px;font-size:12.5px;color:rgba(255,255,255,0.65);line-height:1.8;font-family:"JetBrains Mono",monospace;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word}
 
 /* ── CUSTOM FIELDS ── */
-.cf { background: #F8FAFF; border-left: 3px solid var(--blue); padding: 13px 18px; border-bottom: 1px solid var(--border); }
-.cfl { font-size: 7pt; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 9px; }
-.fr { display: flex; gap: 8px; margin-bottom: 5px; align-items: flex-start; flex-wrap: wrap; }
-.fr:last-child { margin-bottom: 0; }
-.fk { font-family: 'JetBrains Mono', monospace; font-size: 8pt; font-weight: 500; color: var(--text); white-space: nowrap; min-width: 165px; }
-.fv { font-size: 8.5pt; color: var(--gray); font-style: italic; }
+.cf{background:rgba(124,58,237,0.04);border-left:2px solid rgba(124,58,237,0.3);padding:10px 14px;margin:0 16px 12px;border-radius:0 8px 8px 0;font-size:12px;color:rgba(255,255,255,0.55)}
+.cf-label,.cfl{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4B5FD;margin-bottom:6px;display:block}
+.fr{margin-top:4px}
+.fk{background:rgba(124,58,237,0.15);color:#C4B5FD;padding:1px 7px;border-radius:4px;font-size:11px;font-family:"JetBrains Mono",monospace}
+.fv{color:rgba(255,255,255,0.4);font-size:11px;margin-left:6px}
 
-/* ── PROMPT BODY ── */
-.pb { background: var(--dark-card); padding: 15px 18px; font-family: 'JetBrains Mono', monospace; font-size: 8pt; line-height: 1.75; color: #94A3B8; white-space: pre-wrap; word-break: break-word; }
+/* ── REC TABLE ── */
+.rec-table-wrap{overflow-x:auto;padding:0 16px 12px}
+.rec-table{width:100%;border-collapse:collapse;font-size:12px}
+.rec-table th{background:rgba(59,130,246,0.08);color:#93C5FD;font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:7px 12px;text-align:left;border-bottom:1px solid rgba(59,130,246,0.15)}
+.rec-table td{padding:8px 12px;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.65);vertical-align:top;font-size:12px}
+.rec-table tr:last-child td{border-bottom:none}
+.rt{font-family:"JetBrains Mono",monospace;font-size:11px;color:#93C5FD;background:rgba(59,130,246,0.1);padding:2px 8px;border-radius:5px}
 
-/* ── GPT CARDS ── */
-.gc { background: var(--white); border-radius: 12px; padding: 22px; margin-bottom: 16px; break-inside: avoid; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-.gc h3 { font-size: 10.5pt; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-.gc h3 .badge { font-size: 7pt; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; background: #10B981; color: white; padding: 3px 9px; border-radius: 6px; }
-.gcode { background: var(--dark-card); border-radius: 8px; padding: 13px 15px; font-family: 'JetBrains Mono', monospace; font-size: 8pt; color: #94A3B8; line-height: 1.75; margin-bottom: 10px; white-space: pre-wrap; }
-.gex { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 8px; padding: 11px 14px; font-size: 8.5pt; color: var(--text2); font-style: italic; }
-.gex strong { font-style: normal; color: #059669; font-size: 7pt; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 4px; }
-.tipbox { background: var(--blue-l); border: 1px solid var(--blue-m); border-radius: 10px; padding: 18px 20px; margin-top: 20px; font-size: 9pt; color: var(--text2); line-height: 1.65; }
-.tipbox .tl2 { font-weight: 700; color: var(--blue-d); font-size: 7.5pt; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+/* ── HG (how-to grid) ── */
+.hg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.hc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px}
+.hc h3{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px}
+.hc p,.hc .ico{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:4px}
+.hc code{font-family:"JetBrains Mono",monospace;font-size:11px;background:rgba(59,130,246,0.1);color:#93C5FD;padding:1px 5px;border-radius:4px}
+.rb{background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.12);border-radius:12px;padding:16px;margin:12px 0}
+.rb h3{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#93C5FD;margin-bottom:10px}
+.rr{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+.rr:last-child{margin-bottom:0}
+.rd{font-size:12px;color:rgba(255,255,255,0.5);padding-top:2px}
 
-@media print {
-  body { background: white; }
-  .page, .cover, .how, .toc, .psep { page-break-after: always; }
-  .pc, .gc { break-inside: avoid; }
-  @page { margin: 0; size: A4; }
+/* ── HIDE OLD COVER/HOW ── */
+.cover,.how{display:none!important}
+
+/* ── EMPTY SEARCH ── */
+.empty{display:none;text-align:center;padding:60px 0;color:rgba(255,255,255,0.3)}
+.empty.show{display:block}
+.empty-ico{font-size:40px;display:block;margin-bottom:10px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .steps{flex-direction:column;gap:16px}
+  .step:not(:last-child)::after{display:none}
+  .tut{padding:20px}
+  .hg{grid-template-columns:1fr}
+  .pb{font-size:12px;padding:12px}
+  .ph{padding:10px 12px}
 }
-</style>
+
+/* ── GUIDE SECTION ── */
+.guide{margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.07)}
+.guide-header{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.guide-icon{font-size:24px;width:44px;height:44px;background:rgba(59,130,246,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.guide-header h2{font-size:18px;font-weight:800;color:#fff}
+.guide-header p{font-size:13px;color:rgba(255,255,255,0.4);margin-top:3px}
+.guide-intro{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:24px}
+.guide-intro strong{color:rgba(255,255,255,0.75)}
+.gc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.gc-head{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.gc-badge{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+.gc-title{font-size:13px;font-weight:700;color:#fff;flex:1}
+.gc-copy{background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);color:#93C5FD;border-radius:7px;padding:3px 11px;font-size:11px;font-weight:700;cursor:pointer;font-family:"Plus Jakarta Sans",sans-serif;transition:all .15s;white-space:nowrap}
+.gc-copy:hover{background:rgba(59,130,246,0.25);color:#fff}
+.gc-copy.ok{background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);color:#6EE7B7}
+.gc-cmd{padding:14px 18px;font-family:"JetBrains Mono",monospace;font-size:12px;color:rgba(255,255,255,0.7);line-height:1.75;white-space:pre-wrap;background:rgba(0,0,0,0.2)}
+.gc-ex{padding:12px 18px;background:rgba(59,130,246,0.04);border-top:1px solid rgba(59,130,246,0.1);font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6}
+.gc-ex strong{color:#93C5FD;font-size:11px;letter-spacing:.5px;text-transform:uppercase;margin-right:8px}
+.tipbox{background:rgba(255,193,7,0.06);border:1px solid rgba(255,193,7,0.2);border-radius:12px;padding:16px 20px;margin-top:20px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7}
+.tipbox strong{color:rgba(255,255,255,0.85)}
+.tip-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#FCD34D;margin-bottom:8px;display:block}
+.guide-footer{margin-top:48px;text-align:center;color:rgba(255,255,255,0.2);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding-bottom:20px}</style>
+<style>body,#kiwify-page,#kiwify-app,.kw-page,.kiwify-wrapper{background:#0A0D14!important;color:#fff!important}#cria-root *{box-sizing:border-box}</style>
 </head>
 <body>
-
-<!-- COVER -->
-<div class="cover">
-  <div class="cover-badge">Versao 5.0 · Uso Profissional</div>
-  <h1>Pack <span class="hi">Ultimate</span></h1>
-  <p class="cover-sub">300 Prompts de IA · Imagens &amp; Videos · Uso Universal com @image1</p>
-  <div class="cover-stats">
-    <div class="cs"><div class="num">300</div><div class="lbl">Prompts</div></div>
-    <div class="cs"><div class="num">150</div><div class="lbl">Imagens</div></div>
-    <div class="cs"><div class="num">150</div><div class="lbl">Videos</div></div>
-    <div class="cs"><div class="num">31</div><div class="lbl">Categorias</div></div>
-  </div>
-  <div class="cover-tools">
-    <span class="tp img">GPT Image</span>
-    <span class="tp img">Nano Banana</span>
-    <span class="tp vid">Seedance 2.0</span>
-    <span class="tp vid">Seedance 2.5</span>
-    <span class="tp vid">Kling 3.0</span>
-    <span class="tp vids">Google Flow</span>
-  </div>
-  <div class="cover-footer">Pack Ultimate · v5.0 · 2025</div>
-</div>
-
-<!-- HOW TO -->
-<div class="how">
-  <h2>Como Usar</h2>
-  <p class="si">3 passos simples para gerar resultados profissionais com qualquer prompt deste pack.</p>
-  <div class="hg">
-    <div class="hc"><div class="ico">1️⃣</div><h3>1 — Faca upload da sua foto</h3><p>Acesse a plataforma escolhida e faca upload da foto do <strong style="color:#F9FAFB">produto</strong> ou da <strong style="color:#F9FAFB">pessoa</strong>. Ela automaticamente vira <code>@image1</code>.</p></div>
-    <div class="hc"><div class="ico">2️⃣</div><h3>2 — Copie e cole o prompt</h3><p>Escolha o prompt que melhor se encaixa no seu objetivo. Copie o texto exatamente como esta e cole no campo de prompt da plataforma.</p></div>
-    <div class="hc"><div class="ico">3️⃣</div><h3>3 — Preencha os [colchetes]</h3><p>Alguns prompts tem campos personalizaveis marcados com <code>[COLCHETES]</code>. Preencha antes de gerar. Nos prompts de posts, preencha os blocos de customizacao com headline, cores e fonte.</p></div>
-    <div class="hc"><div class="ico">🤖</div><h3>Adaptar com o ChatGPT</h3><p>Precisa ajustar um prompt ao seu produto ou situacao? Veja a secao <em style="color:#F9FAFB">Como Adaptar com o ChatGPT</em> no final deste documento para 6 comandos prontos.</p></div>
-  </div>
-  <div class="rb">
-    <h3>Guia de Referencias</h3>
-    <div class="rr"><span class="rt">@image1</span><span class="rd">Foto do produto (nos prompts de produto) ou foto da pessoa (nos prompts de pessoa)</span></div>
-    <div class="rr"><span class="rt">@image2</span><span class="rd">Segunda referencia quando necessaria — cada prompt indica o que deve ser</span></div>
-    <div class="rr"><span class="rt">[CAMPO]</span><span class="rd">Campo personalizavel — substitua pelo seu conteudo antes de gerar</span></div>
-  </div>
-</div>
-
-<!-- TOC -->
-<div class="toc">
-  <h2>Indice</h2>
-  <p class="tsub">300 prompts organizados em 31 categorias</p>
-  <div class="ts">
-    <div class="tph"><span class="pl pli">Imagens</span><h3>Parte 1 — 150 Prompts de Imagem</h3></div>
-    <div class="ti">
-      <div class="titem"><span class="cn">Cat. 1 — Packshots &amp; Produto</span><span class="cc">#01–#15</span></div>
-      <div class="titem"><span class="cn">Cat. 2 — Efeitos Especiais de Produto</span><span class="cc">#16–#24</span></div>
-      <div class="titem"><span class="cn">Cat. 3 — Retratos &amp; Pessoas</span><span class="cc">#25–#40</span></div>
-      <div class="titem"><span class="cn">Cat. 4 — Posts para Redes Sociais</span><span class="cc">#41–#52</span></div>
-      <div class="titem"><span class="cn">Cat. 5 — Moda &amp; Fashion Editorial</span><span class="cc">#53–#67</span></div>
-      <div class="titem"><span class="cn">Cat. 6 — Fotografia Gastronomica</span><span class="cc">#68–#79</span></div>
-      <div class="titem"><span class="cn">Cat. 7 — Luxo, Joias &amp; Acessorios</span><span class="cc">#80–#89</span></div>
-      <div class="titem"><span class="cn">Cat. 8 — Arquitetura &amp; Interiores</span><span class="cc">#90–#99</span></div>
-      <div class="titem"><span class="cn">Cat. 9 — Macro &amp; Texturas Extremas</span><span class="cc">#100–#112</span></div>
-    </div>
-  </div>
-  <div class="ts">
-    <div class="tph"><span class="pl plv">Videos</span><h3>Parte 2 — 150 Prompts de Video</h3></div>
-    <div class="ti">
-      <div class="titem"><span class="cn">Cat. 10 — FOOH (Fake Out Of Home)</span><span class="cc">#113–#117</span></div>
-      <div class="titem"><span class="cn">Cat. 11 — UGC (User Generated Content)</span><span class="cc">#118–#127</span></div>
-      <div class="titem"><span class="cn">Cat. 12 — Cinematic Product Commercial</span><span class="cc">#128–#137</span></div>
-      <div class="titem"><span class="cn">Cat. 13 — Packshot Video</span><span class="cc">#138–#143</span></div>
-      <div class="titem"><span class="cn">Cat. 14 — VFX &amp; Transformacao</span><span class="cc">#144–#148</span></div>
-      <div class="titem"><span class="cn">Cat. 15 — Cinematic Pessoa</span><span class="cc">#149–#156</span></div>
-      <div class="titem"><span class="cn">Cat. 16 — Brand Storytelling</span><span class="cc">#157–#162</span></div>
-      <div class="titem"><span class="cn">Cat. 17 — Animacao &amp; Fantasia</span><span class="cc">#163–#166</span></div>
-      <div class="titem"><span class="cn">Cat. 18 — Atmosferico &amp; Sci-Fi</span><span class="cc">#167–#171</span></div>
-      <div class="titem"><span class="cn">Cat. 19 — Lifestyle &amp; Rotina</span><span class="cc">#172–#181</span></div>
-      <div class="titem"><span class="cn">Cat. 20 — Drone &amp; Aerial Cinematic</span><span class="cc">#182–#189</span></div>
-      <div class="titem"><span class="cn">Cat. 21 — Epico &amp; Grande Escala</span><span class="cc">#190–#198</span></div>
-      <div class="titem"><span class="cn">Cat. 22 — Esporte &amp; Acao</span><span class="cc">#199–#209</span></div>
-      <div class="titem"><span class="cn">Bonus — Como Adaptar com ChatGPT</span><span class="cc">6 comandos</span></div>
-    </div>
-  </div>
-  <table class="tt">
-    <thead><tr><th>Tipo de Conteudo</th><th>Ferramentas Recomendadas</th></tr></thead>
-    <tbody>
-      <tr><td>Imagens de produto &amp; pessoa</td><td><strong>GPT Image &nbsp;·&nbsp; Nano Banana</strong></td></tr>
-      <tr><td>Videos UGC e Lifestyle</td><td><strong>Seedance 2.0 &nbsp;·&nbsp; Google Flow</strong></td></tr>
-      <tr><td>Videos Cinematic e Packshot</td><td><strong>Seedance 2.0 &nbsp;·&nbsp; Seedance 2.5 &nbsp;·&nbsp; Kling 3.0</strong></td></tr>
-      <tr><td>Videos FOOH e VFX</td><td><strong>Seedance 2.0 &nbsp;ou&nbsp; Seedance 2.5</strong></td></tr>
-      <tr><td>Videos Fantasia, Sci-Fi e Epico</td><td><strong>Seedance 2.0 &nbsp;·&nbsp; Seedance 2.5 &nbsp;·&nbsp; Kling 3.0</strong></td></tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- PART 1 -->
-<div class="psep pi">
-  <div class="pn">Parte 1</div>
-  <h2>150 Prompts<br>de Imagem</h2>
-  <p>Packshots de estudio, efeitos especiais, retratos fotorrealistas, moda editorial, gastronomia, luxo, arquitetura, macro e posts para redes sociais com campos personalizaveis.</p>
-  <div class="tl"><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
-</div>
-
-<!-- CAT 1 -->
+<div id="cria-root" style="background:#0A0D14;min-height:100vh;color:#fff;font-family:inherit">
 <div class="page">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">CRIA</div>
+  <div class="logo-sub">300 Prompts de IA &nbsp;·&nbsp; @dg_vfx</div>
+</div>
+
+<!-- TUTORIAL -->
+<div class="tut">
+  <div class="tut-title">Como usar</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">📋</div>
+      <div class="step-text">Escolha um prompt</div>
+      <div class="step-sub">Navegue pelas categorias ou use a busca</div>
+    </div>
+    <div class="step">
+      <div class="step-num">🤖</div>
+      <div class="step-text">Cole na IA com sua foto</div>
+      <div class="step-sub">Substitua <strong>@image1</strong> pelo seu produto ou pessoa</div>
+    </div>
+    <div class="step">
+      <div class="step-num">📱</div>
+      <div class="step-text">Publique o resultado</div>
+      <div class="step-sub">Conteúdo profissional em segundos</div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input class="search-inp" type="search" id="q" placeholder="Buscar em 300 prompts..." autocomplete="off">
+    <span class="search-count" id="cnt">300 prompts</span>
+  </div>
+</div>
+
+<!-- EMPTY STATE -->
+<div class="empty" id="empty"><span class="empty-ico">🔍</span>Nenhum prompt encontrado.</div>
+<section id="cat-1" class="cat-section">
   <div class="ch"><div class="ci">📦</div><div class="ctb"><h2>Categoria 1 — Packshots &amp; Produto</h2><div class="cm">PROMPTS #01–#15 · 15 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -336,8 +229,8 @@ Shot on Canon EOS R5 with 70mm macro. Three-point studio light: 150cm softbox as
 Shot on Fujifilm GFX 100S with 45-100mm GF at f/4. Natural overcast daylight acting as giant softbox — even, no harsh shadows. Product rests on a natural surface (stone, wood, earth, sand) with the environment softly out of focus behind. Real environmental interaction: slight moisture, dust, natural light bounce from surroundings. Completely authentic, no studio look. Exact product fidelity maintained.</div></div>
 </div>
 
-<!-- CAT 2 -->
-<div class="page">
+
+<section id="cat-2" class="cat-section">
   <div class="ch"><div class="ci">✨</div><div class="ctb"><h2>Categoria 2 — Efeitos Especiais de Produto</h2><div class="cm">PROMPTS #16–#24 · 9 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -369,8 +262,8 @@ Shot on Sony A7RV with 90mm macro at 1/500s to allow slight motion blur in the w
 The product is photographically real — shot on Hasselblad with studio strobe. Holograms are translucent blue-white wireframe or data-visualization aesthetic, correct perspective matched to the product angle. Hologram light casts subtle blue tones onto the product surfaces. No green sci-fi holograms, no generic motion graphics. The product remains the hero — holograms support, do not dominate.</div></div>
 </div>
 
-<!-- CAT 3 -->
-<div class="page">
+
+<section id="cat-3" class="cat-section">
   <div class="ch"><div class="ci">👤</div><div class="ctb"><h2>Categoria 3 — Retratos &amp; Pessoas</h2><div class="cm">PROMPTS #25–#40 · 16 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -423,8 +316,8 @@ Shot on Sony A7C II with 85mm GM at f/1.8. Bright direct afternoon sun from 45 d
 Shot on Canon EOS R5 with 85mm at f/2.8. Natural soft window light from one side, slight fill from bounce card opposite. Background: simple — blurred home interior, neutral wall, or soft bokeh. Expression: warm, genuine, direct. Skin: natural, not retouched, believable. 2/3 of the frame for the face, 1/3 clear space to one side for text overlay. No beauty filter look. Real person, real moment.</div></div>
 </div>
 
-<!-- CAT 4 -->
-<div class="page">
+
+<section id="cat-4" class="cat-section">
   <div class="ch"><div class="ci">📱</div><div class="ctb"><h2>Categoria 4 — Posts para Redes Sociais</h2><div class="cm">PROMPTS #41–#52 · 12 PROMPTS · CAMPOS PERSONALIZAVEIS</div></div><div class="crn"><span class="rnt">@image1 = pessoa ou produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -509,8 +402,8 @@ Simple text overlay: "[HEADLINE]" in clean typography in [COR] accent.
 iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. No studio background.</div></div>
 </div>
 
-<!-- CAT 5 MODA & FASHION EDITORIAL -->
-<div class="page">
+
+<section id="cat-5" class="cat-section">
   <div class="ch"><div class="ci">👗</div><div class="ctb"><h2>Categoria 5 — Moda &amp; Fashion Editorial</h2><div class="cm">PROMPTS #53–#67 · 15 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -545,8 +438,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#67</span><span class="pt">Grunge &amp; Alternativo</span></div><div class="pb">Photorealistic grunge editorial portrait of the person in @image1 in an urban decay setting. Shot on Nikon Z9 with 35mm at f/2.8. Location: abandoned industrial space, peeling paint walls, exposed brick, graffiti. Available mixed light — a beam of natural light from a broken window against the dark interior. Subject styled with fashion-forward grunge aesthetic that contrasts the decaying environment. Identity from @image1 unchanged.</div></div>
 </div>
 
-<!-- CAT 6 GASTRONOMIA -->
-<div class="page">
+
+<section id="cat-6" class="cat-section">
   <div class="ch"><div class="ci">🍽️</div><div class="ctb"><h2>Categoria 6 — Fotografia Gastronomica</h2><div class="cm">PROMPTS #68–#79 · 12 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto alimenticio</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -575,8 +468,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#79</span><span class="pt">Comida Etnica &amp; Especiarias</span></div><div class="pb">Photorealistic world cuisine food photography of @image1 surrounded by its cultural context — spices, herbs, traditional vessels and textiles appropriate to the cuisine's origin. Shot on Sony A7RV with 50mm GM at f/2.8. Warm practical light from an implied window source. Rich colors: deep turmeric yellows, saffron oranges, herb greens. Every element authentic to the cuisine. National Geographic food editorial quality.</div></div>
 </div>
 
-<!-- CAT 7 LUXO JOIAS -->
-<div class="page">
+
+<section id="cat-7" class="cat-section">
   <div class="ch"><div class="ci">💎</div><div class="ctb"><h2>Categoria 7 — Luxo, Joias &amp; Acessorios</h2><div class="cm">PROMPTS #80–#89 · 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -601,8 +494,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#89</span><span class="pt">Produto + Sombra Geometrica</span></div><div class="pb">Photorealistic artistic product photography of @image1 with a precise geometric shadow cast across the product and background from a practical window blind or architectural element. Shot on Sony A7RV with 50mm GM at f/5.6. Strong directional natural light from one side. Shadow strips fall at a precise angle across the product, creating a graphic pattern without obscuring the product's identity. Ultra-modern, graphic, magazine editorial quality.</div></div>
 </div>
 
-<!-- CAT 8 ARQUITETURA -->
-<div class="page">
+
+<section id="cat-8" class="cat-section">
   <div class="ch"><div class="ci">🏛️</div><div class="ctb"><h2>Categoria 8 — Arquitetura &amp; Interiores</h2><div class="cm">PROMPTS #90–#99 · 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto ou ambiente</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -627,8 +520,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#99</span><span class="pt">Produto na Natureza Intocada</span></div><div class="pb">Photorealistic nature photography with @image1 placed in a pristine natural environment. Shot on Fujifilm GFX 100S with 100-200mm GF at f/4 — telephoto compression brings the environment dramatically close. Alpine meadow, tropical waterfall, ancient forest. Product placed on a natural surface: mossy rock, smooth river stone, white sand. The environment dwarfs and contextualizes the product. National Geographic quality photography.</div></div>
 </div>
 
-<!-- CAT 9 MACRO & TEXTURAS -->
-<div class="page">
+
+<section id="cat-9" class="cat-section">
   <div class="ch"><div class="ci">🔬</div><div class="ctb"><h2>Categoria 9 — Macro &amp; Texturas Extremas</h2><div class="cm">PROMPTS #100–#112 · 13 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
 
@@ -657,10 +550,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#111</span><span class="pt">Macro Carbono &amp; Compositos</span></div><div class="pb">Photorealistic extreme macro photography of a carbon fiber or composite material surface of @image1. Shot on Sony A7RV with 90mm macro at f/8. The 2x2 twill weave pattern of the carbon tow visible. Epoxy resin between the tows shows correct surface smoothness and clarity. Fiber orientation perfectly reproduced. Aerospace or motorsport materials quality photography. No invented glossiness — physically accurate surface.</div></div>
 
   <div class="pc"><div class="ph"><span class="pn ni">#112</span><span class="pt">Macro Polimento &amp; Brilho Especular</span></div><div class="pb">Photorealistic extreme macro photography of a highly polished or mirror-finished surface of @image1. Shot on Hasselblad X2D with 120mm macro. The environment is reflected in the surface — reversed and distorted according to the curvature. Every scratch and micro-imperfection in the polish physically accurate. Specular highlights show the actual light sources. Luxury finishing quality inspection photography. This is the surface of a watch case, a jewel, or a premium product finish.</div></div>
-</div>
-
-
-<div class="page">
+</section>
+<section id="cat-10" class="cat-section">
   <div class="ch"><div class="ci">🌿</div><div class="ctb"><h2>Categoria 10 — Natureza &amp; Lifestyle Outdoor</h2><div class="cm">PROMPTS #113—#122 — 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
   <div class="pc"><div class="ph"><span class="pn ni">#113</span><span class="pt">Floresta Tropical com Luz Filtrada</span></div><div class="pb">Ultra-photorealistic portrait of the exact person from @image1 in a lush tropical rainforest. Shot on Sony A7R IV with an 85mm f/1.4 lens. Dappled sunlight filtering through thick green canopy. Natural skin texture and hair behavior in humid environment. Cinematic lighting, rich greens, shallow depth of field.</div></div>
@@ -673,9 +564,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#120</span><span class="pt">Jardim Botanico</span></div><div class="pb">Elegant portrait of the person from @image1 inside a lush botanical garden greenhouse. Soft, diffused natural light passing through glass panels. Shot on Leica SL2 with 50mm f/1.4 Summilux. Extremely rich textures, natural skin tones, photorealistic floral background.</div></div>
   <div class="pc"><div class="ph"><span class="pn ni">#121</span><span class="pt">Deserto Dourado</span></div><div class="pb">Epic shot of the person from @image1 in a vast sandy desert environment. Deep golden hour light creating strong, dramatic shadows. Shot on Sony A7S III, 85mm f/1.4 lens. Wind blowing sand, hyper-detailed skin texture reflecting warm tones.</div></div>
   <div class="pc"><div class="ph"><span class="pn ni">#122</span><span class="pt">Neve e Aurora Boreal</span></div><div class="pb">Magical winter portrait of the person from @image1 standing in a snowy landscape under the northern lights. Night photography, shot on Sony A7R V with 14mm f/1.8 lens. Soft glowing light from the aurora illuminating the face, crisp photorealistic details, freezing breath effect.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-11" class="cat-section">
   <div class="ch"><div class="ci">🔮</div><div class="ctb"><h2>Categoria 11 — Neon, Futurismo &amp; Cyberpunk</h2><div class="cm">PROMPTS #113—#122 — 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
   <div class="pc"><div class="ph"><span class="pn ni">#123</span><span class="pt">Retrato Neon Dupla Cor</span></div><div class="pb">Ultra-photorealistic close-up portrait of the person from @image1 illuminated by dual-tone neon lighting, vivid magenta and cyan. Shot on Sony A7R IV, 85mm f/1.4. Deep shadows, glowing rim light on hair and jawline, highly detailed skin pores reflecting the neon glow.</div></div>
@@ -688,9 +578,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#130</span><span class="pt">UV Blacklight</span></div><div class="pb">Avant-garde portrait of the person from @image1 illuminated entirely by UV blacklight. Glowing futuristic body paint accents. Shot on Canon EOS 1D X Mark III, 85mm f/1.4. Pitch black background, striking contrast, hyper-detailed neon glowing textures.</div></div>
   <div class="pc"><div class="ph"><span class="pn ni">#131</span><span class="pt">Futurismo Chrome</span></div><div class="pb">High-end futuristic portrait of the person from @image1 wearing chrome metallic accessories. Shot on Medium Format Phase One XF, 80mm lens. Intense specular highlights, clean minimalist studio lighting, extremely sharp and photorealistic.</div></div>
   <div class="pc"><div class="ph"><span class="pn ni">#132</span><span class="pt">Laser Grid</span></div><div class="pb">Intense cinematic shot of the person from @image1 standing in a dark room filled with red and blue laser grid beams. Shot on Sony A7S III, 50mm f/1.4. Atmospheric smoke, lasers wrapping around the face and body, crisp cinematic look.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-12" class="cat-section">
   <div class="ch"><div class="ci">◻️</div><div class="ctb"><h2>Categoria 12 — Minimalismo &amp; Conceito</h2><div class="cm">PROMPTS #133—#140 — 8 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
   <div class="pc"><div class="ph"><span class="pn ni">#133</span><span class="pt">Produto Levitando</span></div><div class="pb">Ultra-photorealistic conceptual photography of the product from @image1 levitating in mid-air against a pure white background. Shot on Phase One IQ4 150MP, 120mm macro lens. Flawless studio lighting, sharp edges, perfect material representation, hyper-detailed.</div></div>
@@ -701,9 +590,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   <div class="pc"><div class="ph"><span class="pn ni">#138</span><span class="pt">Produto em Escala Gigante</span></div><div class="pb">Surreal minimalist photography featuring the product from @image1 scaled up to massive proportions in a vast, empty concrete room. Shot on Arri Alexa 65. Soft cinematic lighting, hyper-realistic textures, architectural scale and mood.</div></div>
   <div class="pc"><div class="ph"><span class="pn ni">#139</span><span class="pt">Sombra como Elemento</span></div><div class="pb">Creative minimalist product shot of the product from @image1 casting a long, geometric shadow that forms a distinct shape. Hard directional sunlight. Shot on Leica SL2, 50mm f/2. High contrast, sharp edges, pure and artistic.</div></div>
   <div class="pc"><div class="ph"><span class="pn ni">#140</span><span class="pt">Contraste Preto e Branco</span></div><div class="pb">Striking black and white minimalist photography of the product from @image1. Deep shadows and bright highlights. Shot on Leica M11 Monochrom, 50mm Summilux. Extremely sharp details, premium metallic or matte textures perfectly rendered.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-13" class="cat-section">
   <div class="ch"><div class="ci">📲</div><div class="ctb"><h2>Categoria 13 — Posts Avancados para Redes Sociais</h2><div class="cm">PROMPTS #141—#150 — 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa ou produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp img">GPT Image</span><span class="tp img">Nano Banana</span></div>
   <div class="pc"><div class="ph"><span class="pn ni">#141</span><span class="pt">Stories Enquete Interativa</span></div><div class="cf"><div class="cfl">Preencha antes de usar</div><div class="fr"><span class="fk">[TEMA]</span><span class="fv">"Moda Sustentavel"</span></div><div class="fr"><span class="fk">[CORES]</span><span class="fv">"Verde e Branco"</span></div></div><div class="pb">Create a vertical 9:16 Instagram Story design featuring the subject from @image1. The layout must be engaging and modern, focusing on the theme [TEMA]. Use a color palette of [CORES]. Leave an empty interactive poll box in the center. High resolution, aesthetic typography.</div></div>
@@ -731,8 +619,8 @@ iPhone 16 Pro camera aesthetic. Warm, honest, relatable. Brand trust-building. N
   </div>
 </div>
 
-<!-- CAT 10 FOOH -->
-<div class="page">
+
+<section id="cat-14" class="cat-section">
   <div class="ch"><div class="ci">🏙️</div><div class="ctb"><h2>Categoria 10 — FOOH (Fake Out Of Home)</h2><div class="cm">PROMPTS #113–#117 · 5 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span></div>
 
@@ -804,8 +692,8 @@ AUDIO: No music. Environmental sound and impact SFX only.
 HARD CONSTRAINTS: No invented products. No color changes. Physically accurate balloon behavior. No music. No text overlay.</div></div>
 </div>
 
-<!-- CAT 11 UGC -->
-<div class="page">
+
+<section id="cat-15" class="cat-section">
   <div class="ch"><div class="ci">📱</div><div class="ctb"><h2>Categoria 11 — UGC (User Generated Content)</h2><div class="cm">PROMPTS #118–#127 · 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa ou produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vids">Google Flow</span></div>
 
@@ -944,8 +832,8 @@ Audio: Real ambient environment sounds. No background music over dialogue moment
 Hard constraints: @image1 identity unchanged. No scripted tourist poses. Real spontaneous feel.</div></div>
 </div>
 
-<!-- CAT 12 CINEMATIC PRODUCT -->
-<div class="page">
+
+<section id="cat-16" class="cat-section">
   <div class="ch"><div class="ci">🎬</div><div class="ctb"><h2>Categoria 12 — Cinematic Product Commercial</h2><div class="cm">PROMPTS #128–#137 · 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1072,8 +960,8 @@ VISUAL QUALITY: Physically accurate volumetric light scattering. No rainbow halo
 AUDIO: No music. Absolute near-silence. A barely perceptible low-frequency resonance during the light revelation.</div></div>
 </div>
 
-<!-- CAT 13 PACKSHOT -->
-<div class="page">
+
+<section id="cat-17" class="cat-section">
   <div class="ch"><div class="ci">📦</div><div class="ctb"><h2>Categoria 13 — Packshot Video (Loops &amp; Studio)</h2><div class="cm">PROMPTS #138–#143 · 6 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1143,8 +1031,8 @@ AUDIO: No music. Continuous gentle water flow sound. Subtle.
 Hard constraints: Perfect loop. @image1 unchanged. Physically accurate water behavior.</div></div>
 </div>
 
-<!-- CAT 14 VFX -->
-<div class="page">
+
+<section id="cat-18" class="cat-section">
   <div class="ch"><div class="ci">🌀</div><div class="ctb"><h2>Categoria 14 — VFX &amp; Transformacao</h2><div class="cm">PROMPTS #144–#148 · 5 PROMPTS</div></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span></div>
 
@@ -1218,8 +1106,8 @@ AUDIO: No music. Diegetic only: ambient environment, tiny footsteps (miniature p
 HARD CONSTRAINTS: No cuts. One continuous shot. No second person. No identity change. No music.</div></div>
 </div>
 
-<!-- CAT 15 CINEMATIC PESSOA -->
-<div class="page">
+
+<section id="cat-19" class="cat-section">
   <div class="ch"><div class="ci">🎭</div><div class="ctb"><h2>Categoria 15 — Cinematic Pessoa</h2><div class="cm">PROMPTS #149–#156 · 8 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1339,8 +1227,8 @@ AUDIO: Athletic sounds — footsteps, breathing, physical effort. Building cinem
 HARD CONSTRAINTS: @image1 face and appearance unchanged. Real athletic behavior — not choreographed. No text. No watermark.</div></div>
 </div>
 
-<!-- CAT 16 BRAND STORYTELLING -->
-<div class="page">
+
+<section id="cat-20" class="cat-section">
   <div class="ch"><div class="ci">📖</div><div class="ctb"><h2>Categoria 16 — Brand Storytelling</h2><div class="cm">PROMPTS #157–#162 · 6 PROMPTS</div></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1427,8 +1315,8 @@ AUDIO: Soft, warm music. Real ambient sounds — laughter, coffee sounds, mornin
 HARD CONSTRAINTS: @image1 unchanged throughout. Real human connection. Warm and authentic. No watermark.</div></div>
 </div>
 
-<!-- CAT 17 ANIMACAO -->
-<div class="page">
+
+<section id="cat-21" class="cat-section">
   <div class="ch"><div class="ci">🌌</div><div class="ctb"><h2>Categoria 17 — Animacao &amp; Fantasia</h2><div class="cm">PROMPTS #163–#166 · 4 PROMPTS</div></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1488,8 +1376,8 @@ AUDIO: Real street ambience throughout. Marker whoosh before each transformation
 HARD CONSTRAINTS: No target appears as a cartoon BEFORE "Piu!". No pre-existing cartoon objects. No replacement characters. Real environment photorealistic throughout. No cuts. No scene changes. No music over street ambience.</div></div>
 </div>
 
-<!-- CAT 18 ATMOSFERICO -->
-<div class="page">
+
+<section id="cat-22" class="cat-section">
   <div class="ch"><div class="ci">🛸</div><div class="ctb"><h2>Categoria 18 — Atmosferico &amp; Sci-Fi</h2><div class="cm">PROMPTS #167–#171 · 5 PROMPTS</div></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1560,8 +1448,8 @@ AUDIO: No music. City ambience: rain, distant traffic, aircraft, water running, 
 HARD CONSTRAINTS: No music. No text. No watermark. Rain behaves correctly throughout.</div></div>
 </div>
 
-<!-- CAT 23 LIFESTYLE & ROTINA -->
-<div class="page">
+
+<section id="cat-23" class="cat-section">
   <div class="ch"><div class="ci">☀️</div><div class="ctb"><h2>Categoria 19 — Lifestyle &amp; Rotina</h2><div class="cm">PROMPTS #172–#181 · 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa ou produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vids">Google Flow</span></div>
 
@@ -1655,8 +1543,8 @@ CAMERA: iPhone selfie mode throughout. Real locations, real movement, real life.
 AUDIO: Natural ambient sounds throughout. No background music. Real voices, real life.</div></div>
 </div>
 
-<!-- CAT 24 DRONE & AERIAL -->
-<div class="page">
+
+<section id="cat-24" class="cat-section">
   <div class="ch"><div class="ci">🚁</div><div class="ctb"><h2>Categoria 20 — Drone &amp; Aerial Cinematic</h2><div class="cm">PROMPTS #182–#189 · 8 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto ou referencia</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span></div>
 
@@ -1727,8 +1615,8 @@ CAMERA: Wide aerial, arc around to product reveal, hero position settle, slow pu
 AUDIO: No music. Natural environmental sounds appropriate to the location.</div></div>
 </div>
 
-<!-- CAT 25 EPICO & GRANDE ESCALA -->
-<div class="page">
+
+<section id="cat-25" class="cat-section">
   <div class="ch"><div class="ci">💥</div><div class="ctb"><h2>Categoria 21 — Epico &amp; Grande Escala</h2><div class="cm">PROMPTS #190–#198 · 9 PROMPTS</div></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1810,8 +1698,8 @@ CAMERA: Beach level, horizon, ascending to rooftop, wide aerial aftermath.
 AUDIO: Silence at the withdrawal, confused voices, then the sound of the wave — deep, growing, overwhelming.</div></div>
 </div>
 
-<!-- CAT 26 ESPORTE & ACAO -->
-<div class="page">
+
+<section id="cat-26" class="cat-section">
   <div class="ch"><div class="ci">🏆</div><div class="ctb"><h2>Categoria 22 — Esporte &amp; Acao</h2><div class="cm">PROMPTS #199–#209 · 11 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -1919,10 +1807,8 @@ VISUAL STYLE: Sports documentary emotional climax. Real running. Real exhaustion
 [18–20s] After: the character from @image1 sitting or kneeling, catching their breath. Tears or quiet joy. Real emotion — not performance.
 CAMERA: Trail tracking behind, close effort detail, finish line wide and close, aftermath intimate.
 AUDIO: Breathing, footsteps, crowd building at the finish, then quiet emotion. No music during the run — subtle music only at the finish.</div></div>
-</div>
-
-
-<div class="page">
+</section>
+<section id="cat-27" class="cat-section">
   <div class="ch"><div class="ci">💕</div><div class="ctb"><h2>Categoria 23 — Romance &amp; Emocional</h2><div class="cm">PROMPTS #248—#257 — 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vids">Google Flow</span></div>
   
@@ -1975,9 +1861,8 @@ HARD CONSTRAINTS: Flawless golden hour lighting, expressive and natural hand ges
 CAMERA: Panavision Millennium DXL2, 50mm lens, slow push-in, deep depth of field to capture the speeding train blur. Desaturated, cold tones.
 AUDIO: Roar of the passing train, dramatic swelling cello music.
 HARD CONSTRAINTS: Perfect motion blur on the background train while keeping characters sharp, realistic cloth deformation during the hug.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-28" class="cat-section">
   <div class="ch"><div class="ci">👻</div><div class="ctb"><h2>Categoria 24 — Horror &amp; Suspense</h2><div class="cm">PROMPTS #248—#257 — 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa (optional)</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -2030,9 +1915,8 @@ HARD CONSTRAINTS: Flawless shadow physics and desynchronization, sharp and disti
 CAMERA: ARRI Alexa Mini, 100mm macro lens, slow push-in, shallow depth of field, moody gothic lighting.
 AUDIO: Plucked metallic music box notes that quickly become dissonant and frantic.
 HARD CONSTRAINTS: Ultra-detailed macro textures of metal and wood, realistic mechanical movement of the gears.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-29" class="cat-section">
   <div class="ch"><div class="ci">🎞️</div><div class="ctb"><h2>Categoria 25 — Micro-Cinema &amp; Curta</h2><div class="cm">PROMPTS #268—#278 — 11 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = pessoa</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -2090,9 +1974,8 @@ HARD CONSTRAINTS: Appetizing and magical food rendering, mysterious atmosphere, 
 CAMERA: ARRI Alexa 65, 18mm ultra-wide lens, majestic and terrifying epic scale framing.
 AUDIO: Peaceful wind, melancholic acoustic guitar.
 HARD CONSTRAINTS: Awe-inspiring sci-fi skybox, photorealistic lighting from the celestial body affecting the foreground, serene acting.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-30" class="cat-section">
   <div class="ch"><div class="ci">📚</div><div class="ctb"><h2>Categoria 26 — Tutorial &amp; How-To</h2><div class="cm">PROMPTS #279—#288 — 10 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = produto</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vids">Google Flow</span></div>
 
@@ -2145,9 +2028,8 @@ HARD CONSTRAINTS: Clear visual differentiation between success and failure, real
 CAMERA: POV perspective, 24mm lens, clean modern desk environment.
 AUDIO: UI clicks, mechanical button sounds, pleasant startup chime.
 HARD CONSTRAINTS: Clear, readable UI elements if applicable, realistic button pressing physics, satisfying activation sequence.</div></div>
-</div>
-
-<div class="page">
+</section>
+<section id="cat-31" class="cat-section">
   <div class="ch"><div class="ci">🦁</div><div class="ctb"><h2>Categoria 27 — Natureza &amp; Wildlife</h2><div class="cm">PROMPTS #289—#300 — 12 PROMPTS</div></div><div class="crn"><span class="rnt">@image1 = animal</span></div></div>
   <div class="cat-tools"><span class="ctl">Ferramentas:</span><span class="tp vid">Seedance 2.0</span><span class="tp vid">Seedance 2.5</span><span class="tp vid">Kling 3.0</span></div>
 
@@ -2253,7 +2135,159 @@ Simplifique esse prompt mantendo apenas as instrucoes essenciais de estilo, cena
   <div style="margin-top:40px;text-align:center;color:var(--lgray);font-size:8pt;letter-spacing:2px;text-transform:uppercase;">
     Pack Ultimate · Versao 5.0 · 300 Prompts · Uso Universal com @image1
   </div>
-</div>
+</section>
 
-</body>
-</html>
+<!-- GUIDE SECTION -->
+<div class="guide">
+  <div class="guide-header">
+    <div class="guide-icon">🤖</div>
+    <div>
+      <h2>Como Adaptar com o ChatGPT</h2>
+      <p>6 comandos prontos para personalizar qualquer prompt</p>
+    </div>
+  </div>
+  <p class="guide-intro">
+    Não sabe como ajustar um prompt para o seu produto ou situação específica? <strong>Use o ChatGPT como assistente de adaptação.</strong>
+    Cole o prompt original e use um dos comandos abaixo — o ChatGPT vai reescrever o prompt adaptado para você.
+    Depois é só copiar e colar na plataforma certa.
+  </p>
+
+  <div class="gc">
+    <div class="gc-head">
+      <div class="gc-badge">01</div>
+      <span class="gc-title">Adaptar para seu produto ou tema</span>
+      <button class="gc-copy" onclick="cpGuide(this)">📋 Copiar</button>
+    </div>
+    <div class="gc-cmd">[COLE O PROMPT AQUI]
+
+Adapte esse prompt para [meu produto/tema/situação].</div>
+    <div class="gc-ex"><strong>Exemplo</strong>Cole o prompt #128 — Hero Shot com Push-In Macro, depois: "Adapte esse prompt para um frasco de perfume feminino floral."</div>
+  </div>
+
+  <div class="gc">
+    <div class="gc-head">
+      <div class="gc-badge">02</div>
+      <span class="gc-title">Adaptar para uma duração diferente de vídeo</span>
+      <button class="gc-copy" onclick="cpGuide(this)">📋 Copiar</button>
+    </div>
+    <div class="gc-cmd">[COLE O PROMPT AQUI]
+
+Adapte esse prompt para um vídeo de [X] segundos.</div>
+    <div class="gc-ex"><strong>Exemplo</strong>Cole o prompt #118 — UGC Bebida, depois: "Adapte esse prompt para um vídeo de 8 segundos."</div>
+  </div>
+
+  <div class="gc">
+    <div class="gc-head">
+      <div class="gc-badge">03</div>
+      <span class="gc-title">Adaptar para formato específico (Stories, Reels, etc.)</span>
+      <button class="gc-copy" onclick="cpGuide(this)">📋 Copiar</button>
+    </div>
+    <div class="gc-cmd">[COLE O PROMPT AQUI]
+
+Adapte esse prompt para formato vertical 9:16 para Instagram Reels.</div>
+  </div>
+
+  <div class="gc">
+    <div class="gc-head">
+      <div class="gc-badge">04</div>
+      <span class="gc-title">Adaptar para outro idioma ou persona</span>
+      <button class="gc-copy" onclick="cpGuide(this)">📋 Copiar</button>
+    </div>
+    <div class="gc-cmd">[COLE O PROMPT AQUI]
+
+Adapte esse prompt para um criador de conteúdo masculino de 30 anos,
+no contexto de academia e fitness. O diálogo deve ser em inglês americano.</div>
+  </div>
+
+  <div class="gc">
+    <div class="gc-head">
+      <div class="gc-badge">05</div>
+      <span class="gc-title">Combinar dois prompts em um</span>
+      <button class="gc-copy" onclick="cpGuide(this)">📋 Copiar</button>
+    </div>
+    <div class="gc-cmd">[COLE O PROMPT A]
+
+[COLE O PROMPT B]
+
+Combine esses dois prompts em um único prompt coerente para um vídeo de 15 segundos.</div>
+  </div>
+
+  <div class="gc">
+    <div class="gc-head">
+      <div class="gc-badge">06</div>
+      <span class="gc-title">Simplificar um prompt longo</span>
+      <button class="gc-copy" onclick="cpGuide(this)">📋 Copiar</button>
+    </div>
+    <div class="gc-cmd">[COLE O PROMPT AQUI]
+
+Simplifique esse prompt mantendo apenas as instruções essenciais de estilo,
+cena e câmera. Máximo de 150 palavras.</div>
+  </div>
+
+  <div class="tipbox">
+    <span class="tip-label">💡 Dica importante</span>
+    O ChatGPT <strong>não vai gerar a imagem ou o vídeo</strong> — ele vai reescrever o prompt adaptado para você.
+    Depois é só copiar o novo prompt e colar na plataforma certa:
+    <strong>GPT Image</strong>, <strong>Nano Banana</strong>, <strong>Seedance 2.0 / 2.5</strong>, <strong>Kling 3.0</strong> ou <strong>Google Flow</strong>.
+  </div>
+
+  <div class="guide-footer">Pack Ultimate · Versão 5.0 · 300 Prompts · @dg_vfx</div>
+</div></div>
+</div><!-- /cria-root -->
+<script>
+// Add copy buttons to .ph without one (cards with .cf block)
+document.querySelectorAll(".ph").forEach(function(ph){
+  if(!ph.querySelector(".cp,.copy-btn")){
+    var b=document.createElement("button");b.className="cp";b.textContent="📋 Copiar";
+    b.onclick=function(){cp(this);};ph.appendChild(b);
+  }
+});
+
+// Search
+var total=document.querySelectorAll(".pc").length;
+document.getElementById("cnt").textContent=total+" prompts";
+document.getElementById("q").addEventListener("input",function(){
+  var t=this.value.trim().toLowerCase(),vis=0;
+  document.querySelectorAll(".cat-section").forEach(function(s){s.style.display="";});
+  document.querySelectorAll(".pc").forEach(function(c){
+    var ok=!t||c.textContent.toLowerCase().includes(t);
+    c.classList.toggle("hidden",!ok);
+    if(ok)vis++;
+  });
+  if(t){
+    document.querySelectorAll(".cat-section").forEach(function(s){
+      s.style.display=[].some.call(s.querySelectorAll(".pc"),function(c){return!c.classList.contains("hidden")})?"":"none";
+    });
+  }
+  document.getElementById("cnt").textContent=vis+" prompts";
+  document.getElementById("empty").classList.toggle("show",vis===0&&!!t);
+});
+
+// Copy
+function cp(btn){
+  var card=btn.closest?btn.closest(".pc"):null;
+  if(!card){var p=btn;while(p&&!p.classList.contains("pc"))p=p.parentNode;card=p;}
+  if(!card)return;
+  var pb=card.querySelector(".pb");
+  if(!pb)return;
+  var txt=pb.textContent.trim();
+  function done(){btn.textContent="✅ Copiado!";btn.classList.add("ok");setTimeout(function(){btn.textContent="📋 Copiar";btn.classList.remove("ok");},2000);}
+  if(navigator.clipboard){navigator.clipboard.writeText(txt).then(done).catch(function(){fallback(txt);done();});}
+  else{fallback(txt);done();}
+  function fallback(t){var ta=document.createElement("textarea");ta.value=t;ta.style.cssText="position:fixed;opacity:0;top:0;left:0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);}
+}
+
+// Copy guide command (gets .gc-cmd text)
+function cpGuide(btn){
+  var cmd=btn.closest?btn.closest(".gc"):null;
+  if(!cmd){var p=btn;while(p&&!p.classList.contains("gc"))p=p.parentNode;cmd=p;}
+  if(!cmd)return;
+  var el=cmd.querySelector(".gc-cmd");
+  if(!el)return;
+  var txt=el.textContent.trim();
+  function done(){btn.textContent="✅ Copiado!";btn.classList.add("ok");setTimeout(function(){btn.textContent="📋 Copiar";btn.classList.remove("ok");},2000);}
+  if(navigator.clipboard){navigator.clipboard.writeText(txt).then(done).catch(function(){fb2(txt);done();});}
+  else{fb2(txt);done();}
+  function fb2(t){var ta=document.createElement("textarea");ta.value=t;ta.style.cssText="position:fixed;opacity:0;top:0;left:0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);}
+}</script>
+</body></html>
